@@ -86,14 +86,14 @@ namespace ChampionData
         /// <param name="newX">The X coordinate specified by the user input for the robot</param>
         public static void setX(int newX)
         {
-            if (x < 4 && x > 0)
+            if (x + newX > 4 || x + newX < 0)
             {
                 // Prevents the robot from falling off the table
-                x += newX;
+                Console.WriteLine("Oops! I will fall off the table if I move there \n");                
             }
             else
             {
-                Console.WriteLine("Oops! I will fall off the table if I move there \n");
+                x += newX;
             }
         }
 
@@ -103,14 +103,14 @@ namespace ChampionData
         /// <param name="newY">The Y coordinate specified by the user input for the robot</param>
         public static void setY(int newY)
         {
-            if (y < 4 && y > 0)
+            if (y + newY > 4 || y + newY < 0)
             {
                 // Prevents the robot from falling off the table
-                y += newY;
+                Console.WriteLine("Oops! I will fall off the table if I move there \n");
             }
             else
             {
-                Console.WriteLine("Oops! I will fall off the table if I move there \n");
+                y += newY;
             }
         }
 
